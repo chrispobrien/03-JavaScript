@@ -55,7 +55,7 @@ function generatePassword() {
   // Note: prompt returns a string value, test that the data entered is an integer by comparing it to its parseInt() value
   do {
     length = prompt("How long do you want your password to be? (" + minLength + " - " + maxLength + ")", minLength);
-    if (length === null) return("");
+    if (length == null) return("");
     if (length < minLength || length > maxLength || length != parseInt(length))
      alert("Please enter a valid number between "+ minLength + " and " + maxLength + "!");
   } while (length < minLength || length > maxLength || length != parseInt(length));
@@ -71,22 +71,22 @@ function generatePassword() {
   do {
 
     includeUpperCase = promptYN("Include upper case letters (A-Z)? (y/n)", "y");
-    if (includeUpperCase === null) return("");
+    if (includeUpperCase == null) return("");
 
     includeLowerCase = promptYN("Include lower case letters (a-z)? (y/n)", "y");
-    if (includeLowerCase === null) return("");
+    if (includeLowerCase == null) return("");
 
     includeNumbers = promptYN("Include numbers (0-9)? (y/n)", "y");
-    if (includeNumbers === null) return("");
+    if (includeNumbers == null) return("");
 
     includeSymbols = promptYN("Include symbols? (y/n)", "y");
-    if (includeSymbols === null) return("");
+    if (includeSymbols == null) return("");
 
     // If user doesn't select at least one character type, show error
-    if (includeUpperCase === "n" && includeLowerCase === "n" && includeNumbers ==="n" && includeSymbols === "n")
+    if (includeUpperCase == "n" && includeLowerCase == "n" && includeNumbers =="n" && includeSymbols == "n")
       alert("Please choose at least one character type!");
 
-  } while (includeUpperCase === "n" && includeLowerCase === "n" && includeNumbers === "n" && includeSymbols === "n");
+  } while (includeUpperCase == "n" && includeLowerCase == "n" && includeNumbers == "n" && includeSymbols == "n");
 
   // Declare return var as empty string
   let returnPassword="";
@@ -94,16 +94,16 @@ function generatePassword() {
   // Assemble keySpace to include all selected character types
   let keySpace="";
   
-  if (includeUpperCase === "y")
+  if (includeUpperCase == "y")
     keySpace += upperCaseLetters;
   
-  if (includeLowerCase === "y")
+  if (includeLowerCase == "y")
     keySpace += lowerCaseLetters;
   
-  if (includeNumbers === "y")
+  if (includeNumbers == "y")
     keySpace += numbers;
   
-  if (includeSymbols === "y") 
+  if (includeSymbols == "y") 
     keySpace += symbols;
   
   // Finally generate desired length password using random characters from keySpace
