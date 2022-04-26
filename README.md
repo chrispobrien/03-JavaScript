@@ -1,7 +1,7 @@
 # JavaScript Password Generator
 
 ## Description
-Week 3 of Columbia Engineering Coding Bootcamp has us writing JavaScript code to prompt the user for parameters of a password to generate.  Parameters include length, and whether or not to include upper case letters, lower case letters, numbers, or symbols.
+Week 3 of Columbia Engineering Coding Bootcamp has us writing JavaScript code to prompt the user for parameters of a password to generate.  Parameters include length, and whether or not to include upper case letters, lower case letters, numbers, and symbols.
 
 Obviously to generate a password at least one character type must be selected. Length is between 8 and 128 characters.
 
@@ -35,12 +35,12 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-* For this exercise I chose to include all code in one function
+* For this exercise I chose to include all code in one function and one nested function within the main one, to prompt for y or n
 * I used JavaScript prompt to solicit parameters from the user, and if the user clicks cancel on any prompt, it ends the function execution and returns a blank password
-* Invalid input will prompt for the same parameter again immediately
+* Invalid input will alert a useful error message and prompt again
 * No character types selected will raise an alert error message and return the user to the first character type prompt
 * I defined sets of characters that I concatenate according to the user's answers into a keySpace var
-* I compute the random password using Math.random() multiplied by the length of the keySpace var to account for an unknown number of characters in the keySpace, and Math.Floor() to convert that to an integer, and concatenate the result character into the returnPassword var
+* I compute the random password using Math.random() multiplied by the length of the keySpace var to account for an unknown number of characters in the keySpace (depends on the user's selection), and Math.Floor() to convert that to an integer, and concatenate the result character into the returnPassword var
 
 ## Installation
 
