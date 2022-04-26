@@ -61,7 +61,7 @@ Since this is a classroom exercise, I would recommend simply opening the index.h
 ## Credits
 
 The contents of
-```
+```js
 function generatePassword()
 ```
 are my own work to solve the Week 3 homework challenge. Index.html and style.css are provided by Columbia Coding Bootcamp/Trilogy and have not been altered.
